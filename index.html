@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Conversación</title>
+    <style>
+        /* Estilo general del cuerpo */
+        body {
+            background-color: #000; /* Fondo negro */
+            color: #FFF; /* Texto blanco */
+            font-family: Arial, sans-serif; /* Tipo de letra */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Estilo del encabezado (título) */
+        header {
+            text-align: center;
+            padding: 60px 20px; /* Espacio alrededor del título */
+            background-image: url('https://i.ibb.co/WWZfW4D/CLASE-MUESTRA-5.png'); /* Imagen de fondo */
+            background-size: cover; /* La imagen cubre todo el espacio */
+            background-position: center; /* Imagen centrada */
+            position: relative;
+            color: #FFF; /* Texto blanco */
+        }
+
+        /* Capa oscura semitransparente sobre la imagen del título */
+        header::before {
+            content: ''; /* Crear una capa vacía */
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.2); /* Capa oscura pero transparente */
+            z-index: 1; /* Mantener la capa detrás del texto */
+        }
+
+        /* Estilo del título */
+        header h1 {
+            font-size: 2.5em;
+            margin: 0;
+            z-index: 2; /* Mantener el texto por encima de la capa oscura */
+            position: relative;
+        }
+
+        /* Estilo del contenido principal */
+        main {
+            padding: 20px;
+        }
+
+        /* Estilo del contenedor que divide el inglés y el español */
+        .container {
+            display: flex;
+            justify-content: space-between; /* Divide el espacio entre los dos cuadros */
+            margin: 0 auto;
+            max-width: 900px; /* Limita el ancho total */
+        }
+
+        /* Estilo de los cuadros de conversación */
+        .box {
+            width: 45%;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #222; /* Fondo gris oscuro */
+        }
+
+        /* Estilo de los subtítulos dentro de los cuadros */
+        .box h2 {
+            text-align: center;
+            font-size: 1.8em;
+        }
+
+        /* Estilo del texto de la conversación */
+        .conversation {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+
+        /* Estilo de cada línea de conversación */
+        .conversation p {
+            margin: 10px 0;
+        }
+
+        /* Estilo del pie de página */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333; /* Fondo gris oscuro para el pie */
+        }
+
+        /* Texto dentro del pie de página */
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Nuevo estilo para la arroba en el pie de página */
+        footer .arroba {
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #FFD700; /* Color dorado para resaltar la arroba */
+        }
+
+        /* Adaptación para pantallas más pequeñas (móviles) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Coloca los cuadros uno sobre otro */
+            }
+            .box {
+                width: 100%; /* Ocupa todo el ancho */
+                margin-bottom: 20px;
+            }
+            header h1 {
+                font-size: 2em; /* Título más pequeño en pantallas pequeñas */
+            }
+            .box h2 {
+                font-size: 1.5em; /* Subtítulos más pequeños */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Conversación</h1> <!-- Título de la página -->
+</header>
+
+<main>
+    <div class="container">
+        <!-- Cuadro en Español -->
+        <div class="box">
+            <h2>Español</h2>
+            <div class="conversation">
+                <p><strong>Alumno 1:</strong> Hola, ¿cómo estás?</p>
+                <p><strong>Alumno 2:</strong> Estoy bien, ¡gracias! ¿Y tú?</p>
+                <p><strong>Alumno 1:</strong> Yo también estoy bien. ¿Qué estás haciendo?</p>
+                <p><strong>Alumno 2:</strong> Estoy haciendo mi tarea. Es de matemáticas.</p>
+                <p><strong>Alumno 1:</strong> Oh, ya veo. ¡Las matemáticas son difíciles!</p>
+                <p><strong>Alumno 2:</strong> Sí, pero me gusta. ¿Te gustan las matemáticas?</p>
+                <p><strong>Alumno 1:</strong> No mucho, prefiero ciencias.</p>
+                <p><strong>Alumno 2:</strong> ¡Las ciencias son divertidas! Estudiemos juntos.</p>
+                <p><strong>Alumno 1:</strong> ¡Claro! Nos vemos a las 3 en punto.</p>
+                <p><strong>Alumno 2:</strong> ¡Hasta luego!</p>
+            </div>
+        </div>
+
+        <!-- Cuadro en Inglés -->
+        <div class="box">
+            <h2>English</h2>
+            <div class="conversation">
+                <p><strong>Student 1:</strong> Hi, how are you?</p>
+                <p><strong>Student 2:</strong> I'm good, thank you! And you?</p>
+                <p><strong>Student 1:</strong> I'm fine, too. What are you doing?</p>
+                <p><strong>Student 2:</strong> I'm doing my homework. It's math.</p>
+                <p><strong>Student 1:</strong> Oh, I see. Math is hard!</p>
+                <p><strong>Student 2:</strong> Yes, but I like it. Do you like math?</p>
+                <p><strong>Student 1:</strong> Not really, I prefer science.</p>
+                <p><strong>Student 2:</strong> Science is fun! Let's study together.</p>
+                <p><strong>Student 1:</strong> Sure! See you at 3 o'clock.</p>
+                <p><strong>Student 2:</strong> See you later!</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>&copy; 2024 English School CPS. Todos los derechos reservados<p>
+
+
+</body>
+</html>
